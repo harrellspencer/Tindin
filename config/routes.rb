@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  
+  root 'home#index'
+
+  resources :users do 
+    member do 
+      get 'profile' 
+      get 'matches'
+    end
+  end
+
+get 'auth/facebook/callback', to: "sessions#create"
+match 'sign_out', to: "sessions#destroy", via: :delete
+  # get 'home/index'
+
+ # get 'users/index'
+
+  # get 'users/edit'
+
+  # get 'users/profile'
+
+  # get 'users/matches'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
