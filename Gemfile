@@ -56,3 +56,9 @@ gem 'omniauth-facebook'
 gem "paperclip"
 
 gem 'aws-sdk', '< 2.0'
+
+gem 'simple_form'
+
+gem "cancan"
+
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'

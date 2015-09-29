@@ -12,9 +12,9 @@ module Tindin
     config.paperclip_defaults = {
         :storage => :s3,
         :s3_credentials => {
-            :bucket =>"sharrell", #ENV ['AWS_BUCKET'],
-            :access_key_id =>"AKIAIGRAP5RUIDY774SA", #ENV['AWS_ACCESS_KEY_ID'],
-            :secret_access_key =>"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" #ENV['AWS_SECRET_ACCESS_KEY']
+            :bucket =>ENV ['AWS_BUCKET'],
+            :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+            :secret_access_key =>ENV['AWS_SECRET_ACCESS_KEY']
         }
     }
     # Settings in config/environments/* take precedence over those specified here.
